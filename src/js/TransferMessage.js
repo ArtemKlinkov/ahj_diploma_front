@@ -4,8 +4,8 @@ import PrintMessage from './PrintMessage.js';
 import CryptKey from './CryptKey.js';
 
 const localArrMessages = [];
-// const urls = 'ahj-diploma-backend.herokuapp.com';
-const urls = 'localhost:7070';
+const urls = 'ahj-diploma-backend.herokuapp.com';
+// const urls = 'localhost:7070';
 
 export default class TransferMessage {
   constructor(crypt) {
