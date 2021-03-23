@@ -10,8 +10,8 @@ const urls = 'ahj-diploma-backend.herokuapp.com';
 export default class TransferMessage {
   constructor(crypt) {
     this.keyCrypt = crypt;
-    this.urlWS = `ws://${urls}/ws`;
-    this.url = `http://${urls}/`;
+    this.urlWS = `wss://${urls}/ws`;
+    this.url = `https://${urls}/`;
     this.crypt = new CryptKey(crypt);
     this.lazyStart = true;
   }
