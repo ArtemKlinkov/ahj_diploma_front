@@ -1,3 +1,4 @@
+/* eslint-disable no-useless-return */
 // eslint-disable-next-line import/no-unresolved
 import Worker from './webWorker.js';
 import PrintMessage from './PrintMessage.js';
@@ -36,17 +37,6 @@ export default class TransferMessage {
       if (itemEl !== null) {
         itemEl.classList.remove('loaded');
         return;
-      }
-
-      const deCrypt = this.crypt.deCrypt(inpMsg.msg);
-
-      if (deCrypt && deCrypt !== null) {
-        inpMsg.msg = deCrypt;
-        localArrMessages.push(inpMsg);
-        this.printMsg.printMsg(inpMsg, 'end');
-        document
-          .querySelector(`[data-id="${inpMsg.id}"]`)
-          .classList.remove('loaded');
       }
     });
   }
