@@ -111,7 +111,7 @@ export default class RecAudioVideo {
               pin: false,
               favorit: false,
               msg: fr.result,
-              // msg: dataFile,
+              name: `${tVideo ? 'Video' : 'Voice'} record`,
               dateTime: new Date(),
             };
             this.transferMsg.sendMessage(objMessage);
